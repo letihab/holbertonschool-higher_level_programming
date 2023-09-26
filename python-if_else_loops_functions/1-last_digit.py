@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-last_digit = abs(number) % 10  # Obtient la valeur absolue du nombre et calcule le dernier chiffre.
-is_negative = number < 0  # Vérifie si le nombre est négatif.
+last_digit = abs(number) % 10
+is_negative = number < 0 
 
 if is_negative:
-    last_digit = -last_digit  # Change le signe du dernier chiffre si le nombre est négatif.
+    last_digit = -last_digit 
 
 print("Last digit of", number, "is", last_digit, end=" ")
 
