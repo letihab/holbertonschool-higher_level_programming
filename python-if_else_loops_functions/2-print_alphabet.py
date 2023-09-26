@@ -1,4 +1,4 @@
 #!/usr/bin/python3
+import sys
 for char_code in range(ord('a'), ord('z') + 1):
-    print(chr(char_code), end='')
-    
+    sys.stdout.write(chr(char_code))
