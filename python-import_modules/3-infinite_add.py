@@ -5,4 +5,4 @@ if __name__ == "__main__":
     argc = len(sys.argv)
     for i in range(1, argc):
         result += int(sys.argv[i])
-    print("{}".format(result))     
+    print("{}".format(result))   
