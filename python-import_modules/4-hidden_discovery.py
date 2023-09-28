@@ -2,8 +2,7 @@
 if __name__ == "__main__":
     import hidden_4
     names = dir(hidden_4)
-    for i in range(len(names)):
-        if names[i][0] != '__' and names[i][1] != '__':
-            print(names[i])
+    filtered_names = sorted([name for name in names if not name.startswith("__")])
+    for name in filtered_names:
+        print(name)
  
-
