@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-print_reversed_list_integer = __import__('3-print_reversed_list_integer')
-.print_reversed_list_integer
+prt_r = __import__('3-print_reversed_list_integer').print_reversed_list_integer
 
 my_list = [1, 2, 3, 4, 5]
-print_reversed_list_integer(my_list)
+prt_r(my_list)
