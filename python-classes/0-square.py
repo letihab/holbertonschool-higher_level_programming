@@ -2,5 +2,6 @@
 """class definition of square"""
 
 class Square:
-    """class square defined"""
 
+
+    """class square defined"""
