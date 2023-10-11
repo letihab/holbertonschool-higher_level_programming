@@ -15,7 +15,7 @@ TypeError: last_name must be a string
 My name is  Holberton
 
 >>> say_my_name("", "")
-My name is   
+My name is
 
 >>> say_my_name()
 Traceback (most recent call last):
