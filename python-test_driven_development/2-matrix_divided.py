@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """
 Write a function that divides all elements of a matrix.
-matrix must be a list of lists of integers or floats, otherwise 
-raise a TypeError exception with the message matrix must be a 
+matrix must be a list of lists of integers or floats, otherwise
+raise a TypeError exception with the message matrix must be a
 matrix (list of lists) of integers/floats
 
-Each row of the matrix must be of the same size, otherwise raise a TypeError exception
- with the message Each row of the matrix must have the same size
+Each row of the matrix must be of the same size, otherwise
+raise a TypeError exception with the message Each row of the
+matrix must have the same size
 """
-
 
 
 def matrix_divided(matrix, div):
@@ -27,10 +27,8 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError(div_zero_error)
     if not all(len(row) == row_size for row in matrix):
-            raise TypeError(len_error)
+        raise TypeError(len_error)
     for row in matrix:
-            new_row = [round(num / div, 2) for num in row]
-            new_matrix.append(new_row)
+        new_row = [round(num / div, 2) for num in row]
+        new_matrix.append(new_row)
     return new_matrix
-
-    
