@@ -66,3 +66,5 @@ class Rectangle:
                 for j in range(self.__width):
                     rect += "#"
         return rect
+    def __repr__(self):
+        
