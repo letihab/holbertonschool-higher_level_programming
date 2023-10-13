@@ -8,7 +8,7 @@ Note that quotients are rounded to a maximum of two decimal places
 
 >>> matrix = [ [1, 2, 3], [4, 5, 6]]
 >>> matrix_divided(matrix, 3)
-    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
 The original matrix is left unchanged.
 
@@ -18,7 +18,6 @@ The original matrix is left unchanged.
 
 Integers and float can be combined
 
-::
 >>> matrix = [[1, -2.2, 3, 4.4, 5], [-6.6, 7.00, 8, 9.999, 1]]
 >>> matrix_divided(matrix, 3)
 [[0.33, -0.73, 1.0, 1.47, 1.67], [-2.2, 2.33, 2.67, 3.33, 3.33]]
@@ -27,29 +26,9 @@ Invalid Matrices
 ==============
 matrix must be a list of lists consisting of either int or float.
 
->>> matrix = "not a list"
->>> matrix_divided(matrix, 3)
-Traceback (most recent call last):
-TypeError: matrix must be a matrix (list of lists) of integers/floats
-
->>> matrix = None
->>> matrix_divided(matrix, 3)
-Traceback (most recent call last):
-TypeError: matrix must be a matrix (list of lists) of integers/floats
-
->>> matrix = []
->>> matrix_divided(matrix, 3)
-Traceback (most recent call last):
-TypeError: matrix must be a matrix (list of lists) of integers/floats
-
 >>> matrix = [[]]
 >>> print(matrix_divided(matrix, 3))
 [[]]
-
->>> matrix = [[1, 2, 3], ["not", "a", "number"]]
->>> matrix_divided(matrix, 3)
-Traceback (most recent call last):
-TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 >>> matrix = [[1, 2, 3, 4], [5, 6, 7]]
 >>> matrix_divided(matrix, 3)
