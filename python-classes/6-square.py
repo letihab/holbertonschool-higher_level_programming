@@ -5,7 +5,7 @@
 class Square:
     """class square defined"""
 
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """initialize method"""
         if not isinstance(size, int):
             raise TypeError('size must be an integer')
@@ -60,4 +60,4 @@ class Square:
             print('\n' * self.__position[1], end='')
             for i in range(self.__size):
                 print(' ' * self.__position[0], end='')
-                print('#' * self.__size)  
+                print('#' * self.__size)
