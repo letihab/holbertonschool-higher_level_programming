@@ -7,7 +7,11 @@ you are not allowed to import any module
 
 
 class Rectangle:
-    """initialized method of class Rectangle"""
+    """A Rectangle class with attributes width and height,
+    methods area, perimeter, print, str, repr, and del, and
+    class attribute number_of_instances that keeps track of # of instances,
+    class attribute print_symbol which is used as symbol for printing,
+    and static method bigger_or_equal that returns biggest rectangle."""
 
     number_of_instances = 0
     print_symbol = "#"
@@ -81,3 +85,15 @@ class Rectangle:
     def __del__(self):
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+
+    def bigger_or_equal(rect_1, rect_2):
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_& must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        else:
+            return rect_2
+
