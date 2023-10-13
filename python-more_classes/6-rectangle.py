@@ -8,6 +8,9 @@ you are not allowed to import any module
 
 class Rectangle:
     """initialized method of class Rectangle"""
+
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
@@ -75,4 +78,3 @@ class Rectangle:
     def __del__(self):
         print("Bye rectangle...")
         Rectangle.number_of_instance -= 1
-
