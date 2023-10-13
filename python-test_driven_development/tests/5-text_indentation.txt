@@ -2,14 +2,14 @@
 
 >>> text_indentation("Hello.")
 Hello.
-<Blankline>
+<BLANKLINE>
 
 >>> text_indentation("Hello. World: Here I am!")
- Hello.
+Hello.
 <BLANKLINE>
- World:
+World:
 <BLANKLINE>
- Here I am!
+Here I am!
 
 >>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
 ... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
