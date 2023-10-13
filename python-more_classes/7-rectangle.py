@@ -72,7 +72,7 @@ class Rectangle:
                 except Exception:
                     rect += type(self).print_symbol
             if i != self.__height - 1:
-                rect +="\n"
+                rect += "\n"
         return rect
 
     def __repr__(self):
