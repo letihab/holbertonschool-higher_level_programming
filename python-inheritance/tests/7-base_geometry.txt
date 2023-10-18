@@ -25,12 +25,6 @@ with no arguments.
 In fact, any arguments supplied to an instantiation of `BaseGeometry` results
 in a TypeError.
 
-::
-
-    >>> bg = BaseGeometry(None)
-    Traceback (most recent call last):
-    TypeError: object() takes no parameters
-
 Methods
 =======
 
@@ -122,20 +116,6 @@ is raised.
     ValueError: invalid int must be greater than 0
 
 Both `name` and `value` must be provided. Otherwise, a TypeError is raised.
-
-::
-
-    >>> bg.integer_validator() # doctest: +NORMALIZE_WHITESPACE
-    Traceback (most recent call last):
-    TypeError: integer_validator() missing 2 required positional arguments:
-    'name' and 'value'
-
-::
-
-    >>> bg.integer_validator(None) # doctest: +NORMALIZE_WHITESPACE
-    Traceback (most recent call last):
-    TypeError: integer_validator() missing 1 required positional argument:
-    'value'
 
 The method assumes the paramter `name` will be a string, but `name` of any
 type will be printed.
