@@ -7,12 +7,12 @@ class Rectangle(Base):
     """class rectangle with private instance attributes"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
-        self. y = y
-        super().__init__(id)
-    
+        self.y = y
+
     @property
     def width(self):
         return self.__width
@@ -61,33 +61,23 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-    @publicmethod
     def area(self):
         """return the area of the rectangle"""
         return self.width * self.height
 
     def display(self):
         """print to the standard output the Rectangle instance with #"""
-        if self.width == 0 and self.height == 0:
+        if self.width == 0 or self.height == 0:
             print("")
-            return 
-        [print("") for y in range(self.y)]
-        for i in range(self.height):
-            [print(" ", end="") for x in range(self.x)]
-            [print("#", end="") for j in range(self.width)]
-            print("")
+            return
+        for _ in range(self.y):
+            print()
+        for _ in range(self.height):
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         """override __str__ with new string in the format
         [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
-
-    str_repr = "[Rectangle] ({}) {}/{}".format(
-        (self.id), (self.x), (self.y),
-        (self.width), (self.height))
-    return str_repr
-
-
-
-
-
-
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height
+        )
