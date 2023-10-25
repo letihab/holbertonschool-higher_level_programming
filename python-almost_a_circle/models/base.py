@@ -3,7 +3,6 @@
 import json
 
 
-
 class Base:
     """base model
     this is the base for all the task in that project"""
@@ -12,7 +11,7 @@ class Base:
 
     def __init__(self, id=None):
         if id is not None:
-            self.id =  id
+            self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
@@ -48,7 +47,7 @@ class Base:
         """returns an instance with all attributes already set"""
         if dictionary and dictionary != {}:
             if cls.__name__ == "Rectangle":
-                new = cls(1,1)
+                new = cls(1, 1)
             else:
                 new = cls(1)
             new.update(**dictionary)
