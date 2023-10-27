@@ -18,6 +18,7 @@ class Base:
                     raise TypeError("id must be an integer")
             if isinstance(id, int) and id < 0:
                 raise ValueError("id must be a non-negative integer")
+            self.id = id
         else:   
             Base.__nb_objects += 1
             self.id += Base.__nb_objects
