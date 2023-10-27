@@ -10,13 +10,17 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        if not isinstance(id, int):
-            raise TypeError("id must be an integer")
-        if id is None:
-            self.id = Base.__nb_objects
-        else:
+        if id is not None:
+            if not (isinstance(id, int) or isinstance(id, list)):
+                try:
+                    id = int(id)
+                except (ValueError, TypeError):
+                    raise TypeError("id must be an integer")
+            if isinstance(id, int) and id < 0:
+                raise ValueError("id must be a non-negative integer")
+        else:   
             Base.__nb_objects += 1
-            self.id = id
+            self.id += Base.__nb_objects
 
     @staticmethod
     def to_json_string(list_dictionaries):
