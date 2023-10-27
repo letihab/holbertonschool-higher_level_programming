@@ -11,7 +11,7 @@ class Base:
 
     def __init__(self, id=None):
         if id is not None:
-            if not (isinstance(id, int) or isinstance(id, list)):
+            if not isinstance(id, int):
                 try:
                     id = int(id)
                 except (ValueError, TypeError):
