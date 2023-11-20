@@ -1,6 +1,6 @@
 --List all records of the table in my MySQL server.
 --ORDERED by descending
-SELECT `score` `name`
+SELECT `score`, `name`
 FROM `second_table`
-WHERE `name` IS NOT NULL AND `name` != ''
+WHERE `name` != ""
 ORDER BY `score` DESC;
