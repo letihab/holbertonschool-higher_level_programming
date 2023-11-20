@@ -1,4 +1,4 @@
---get the information_schema
+--Get the information_schema
 USE `information_schema`;
 
 SELECT TABLE_NAME, CREATE_TABLE_STATEMENT
