@@ -1,9 +1,9 @@
--- uses the hbtn_0d_tvshows database to lists all genres of the show Dexter
--- uses a databse to lists all comedy in a table corresponding to all rows in another
+-- lists all Comedy shows in the database hbtn_0d_tvshows
+-- lists all title of a database
 SELECT title
 FROM tv_shows
-LEFT JOIN tv_show_genres ON tv_genres.id = tv_show_genres.genre_id
-LEFT JOIN tv_genre ON tv_show_genres.show_id = tv_genre.id
-WHERE tv_genre.name = 'comedy'
+LEFT JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
+LEFT JOIN tv_genres ON tv_show_genres.genre_id = tv_genres.id
+WHERE tv_genres.name = 'Comedy'
 GROUP BY title
 ORDER BY title ASC;
