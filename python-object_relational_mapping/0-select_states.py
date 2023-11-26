@@ -12,7 +12,7 @@ if __name__ == "__main__":
         db=sys.argv[3],
         port=3306
     )
-    curs= db.cursor()
+    curs = db.cursor()
     query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
     curs.execute(query)
     states = curs.fetchall()
