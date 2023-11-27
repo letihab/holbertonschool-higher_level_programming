@@ -5,7 +5,7 @@ import MySQLdb
 import sys
 
 
-if __name__ == "__main__":
+def list_states():
     db = MySQLdb.connect(
         host="localhost",
         user=sys.argv[1],
@@ -21,3 +21,7 @@ if __name__ == "__main__":
         print(state)
     curs.close()
     db.close()
+
+
+if __name__ == "__main__":
+    list_states()
