@@ -21,5 +21,6 @@ def list_states():
     curs.close()
     connexion.close()
 
+
 if __name__ == "__main__":
     list_states()
