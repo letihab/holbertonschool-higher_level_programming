@@ -3,7 +3,7 @@ lielement.addEventListener("click", newElement);
 
 function newElement() {
   const newLi = document.createElement("li");
-  newLI.textContent = "Item";
+  newLi.textContent = "Item";
   const mylistElement = document.querySelector(".my_list");
   mylistElement.appendChild(newLi);
 }
