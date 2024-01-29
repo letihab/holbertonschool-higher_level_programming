@@ -1,4 +1,4 @@
-const header = document.querySelector("header");
+const header = document.querySelector("#red_header");
 header.addEventListener("click", addclass);
 
 function addclass() {
